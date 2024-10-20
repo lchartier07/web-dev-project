@@ -1,0 +1,333 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#background {
+    height: 100vh;
+    width: 100vw;
+    background: black;
+    background-image: url('Resources/Background.jpg');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    border: 30px solid black;
+
+    z-index: 5;
+}
+
+#game {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#gameUI {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#curtains {
+    position: absolute;
+
+    width: 100%;
+    height: 85%;
+    z-index: 2;
+
+    background-image: url('Resources/Curtains\ -\ OG.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: top center;
+}
+
+#stage {
+    position: absolute;
+
+    width: 100%;
+    height: 20%;
+    z-index: 1;
+
+    bottom: 0;
+
+    background-image: url('Resources/Stage.jpg');
+    background-repeat: repeat-x;
+    background-size: 100% 100%;
+    background-position: bottom center;
+}
+
+.lane {
+    position: absolute;
+
+    background-image: url('Resources/Lane\ Background.jpg');
+    background-repeat: repeat-x;
+    background-size: 100% 100%;
+    background-position: bottom center;
+
+    height: 25%;
+    z-index: 0;
+}
+
+#lane1 {
+    bottom: 45%;
+    width: 90%;
+}
+
+#lane2 {
+    bottom: 20%;
+    width: 95%;
+}
+
+.wave {
+    position: absolute;
+
+    background-image: url('Resources/Waves.png');
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: bottom center;
+
+    bottom: 0%;
+    width: 100%;
+    height: 70%;
+
+    z-index: 1;
+}
+
+.water {
+    position: absolute;
+
+    bottom: 0%;
+
+    background-color: rgba(15, 135, 206, 255);
+
+    width: 100%;
+    height: 25%;
+
+}
+
+#wave1 {
+    animation-name: ocean1;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#wave2 {
+    animation-name: ocean2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes ocean1 {
+    0% {
+        left: 0;
+        bottom: -4%;
+    }
+
+    12.5% {
+        left: 4%;
+        bottom: 0;
+    }
+
+    25% {
+        left: 0;
+        bottom: 4%;
+    }
+
+    37.5% {
+        left: -4%;
+        bottom: 0;
+    }
+
+    50% {
+        left: 0;
+        bottom: -4%;
+    }
+
+    62.5% {
+        left: 4%;
+        bottom: -8%;
+    }
+
+    75% {
+        left: 0;
+        bottom: -12%;
+    }
+
+    87.5% {
+        left: -4%;
+        bottom: -8%;
+    }
+
+    100% {
+        left: 0;
+        bottom: -4%;
+    }
+}
+
+@keyframes ocean2 {
+    0% {
+        left: 0;
+        bottom: -4%;
+        transform: scaleX(100%);
+    }
+
+    12.5% {
+        left: 2%;
+        bottom: 0;
+        transform: scaleX(100%);
+    }
+
+    25% {
+        left: 0;
+        bottom: 4%;
+        transform: scaleX(100%);
+
+    }
+
+    37.5% {
+        left: -2%;
+        bottom: 0;
+        transform: scaleX(100%);
+    }
+
+    50% {
+        left: 0;
+        bottom: -4%;
+        transform: scaleX(100%);
+    }
+
+    62.5% {
+        left: 2%;
+        bottom: -8%;
+        transform: scaleX(100%);
+    }
+
+    75% {
+        left: 0;
+        bottom: -12%;
+        transform: scaleX(100%);
+    }
+
+    87.5% {
+        left: -2%;
+        bottom: -8%;
+        transform: scaleX(100%);
+    }
+
+    100% {
+        left: 0;
+        bottom: -4%;
+        transform: scaleX(100%);
+    }
+}
+
+/* ALL CSS ABOVE THIS COMMENT IS LEO'S WORK */
+
+/* SAM'S STYLING BELOW */
+
+#background
+{
+    opacity: 25%;
+}
+
+#summary
+{
+    position: relative;
+    display: inline-block;
+}
+
+#statistics
+{
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-130%, -50%); 
+    color: #04AA6E; 
+    padding: 10px 20px; 
+    font-size: 20px; 
+    text-align: center;
+    background-color: white;
+    opacity: 82.5%;
+}
+
+#recentScores
+{
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-10%, -40%); 
+    color: #04AA6E; 
+    padding: 10px 10px; 
+    font-size: 20px; 
+    text-align: center;
+    background-color: white;
+    opacity: 82.5%;
+}
+
+h1,h2
+{
+
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:xx-large;
+    text-decoration: solid;
+    text-rendering: auto;
+    text-transform: uppercase;
+    text-shadow: 1px 1px black;
+    text-align: left;
+}
+
+h1
+{
+    font-size: 80px;
+    font-weight:bolder;    
+}
+
+h2
+{
+    font-size: 50px;
+}
+
+hr
+{
+    border: 0.5px solid #04AA6E;   
+    border-radius: 5px;
+}
+
+#titleDivider, #titleDivider2
+{
+    border: 10px solid #04AA6E;   
+
+}
+
+#restart
+{
+    position: absolute;
+
+    transform: translate(0%, 200%); 
+    border-style: none;
+
+    top: 60%;
+    left: 52%;
+}
+
+button
+{
+    font-size: 42px;
+    background-color: #04aa6e;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 12px;
+    width: 250px;
+    font-weight: bolder;
+}

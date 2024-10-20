@@ -1,0 +1,22 @@
+img{
+    width: 300px;
+}
+
+div, img
+{
+    animation-name: right-to-left;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes right-to-left
+{
+    from
+    {
+        left: 100%;
+    }
+    to {
+        left: 0%;
+    }
+}

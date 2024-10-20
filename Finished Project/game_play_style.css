@@ -1,0 +1,452 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#gameArea {
+    height: 100vh;
+    width: auto;
+    margin: auto;
+
+    background: black;
+    border: 30px solid black;
+}
+
+#game {
+    aspect-ratio: 7/3;
+    position: relative;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('Resources/Background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    cursor: url(Resources/crosshair.png) 45 45, auto;
+}
+
+#gameUI {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#curtain_left {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: 85%;
+
+    background-image: url('Resources/Curtain\ -\ Left.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: top center;
+
+    z-index: 4;
+}
+
+#curtain_right {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    width: 10%;
+    height: 85%;
+
+    background-image: url('Resources/Curtains\ -\ Right.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: top center;
+
+    z-index: 4;
+}
+
+#curtain_top {
+    position: absolute;
+
+    top: 0;
+    width: 100%;
+    height: 15%;
+
+    background-image: url('Resources/Curtains\ -\ Top.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: top center;
+
+    z-index: 4;
+}
+
+
+#stage {
+    position: absolute;
+
+    width: 100%;
+    height: 20%;
+
+    bottom: 0;
+
+    background-image: url('Resources/Stage.jpg');
+    background-repeat: repeat-x;
+    background-size: 100% 100%;
+    background-position: bottom center;
+
+    z-index: 4;
+}
+
+.lane {
+    position: absolute;
+
+    background-image: url('Resources/Lane\ Background.jpg');
+    background-repeat: repeat-x;
+    background-size: 100% 100%;
+    background-position: bottom center;
+
+    height: 25%;
+    width: 80%;
+
+    z-index: 3;
+}
+
+#laneBackground1 {
+    bottom: 45%;
+
+    width: 90%;
+}
+
+#laneBackground2 {
+    bottom: 20%;
+
+    width: 90%;
+}
+
+#skyLane {
+    position: absolute;
+
+    height: 25%;
+    width: 80%;
+
+    bottom: 70%;
+    z-index: 3;
+}
+
+#lane1 {
+    bottom: 45%;
+}
+
+#lane2 {
+    bottom: 20%;
+}
+
+.wave {
+    position: absolute;
+
+    background-image: url('Resources/Waves.png');
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: bottom center;
+
+    width: 110%;
+    height: 70%;
+
+    z-index: 3;
+}
+
+#wave1 {
+    animation-name: ocean1;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#wave2 {
+    animation-name: ocean2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes ocean1 {
+    0% {
+        left: -5%;
+        bottom: -4%;
+        transform: scaleX(100%);
+    }
+
+    12.5% {
+        left: -1%;
+        bottom: 0;
+        transform: scaleX(100%);
+    }
+
+    25% {
+        left: -5%;
+        bottom: 4%;
+        transform: scaleX(100%);
+    }
+
+    37.5% {
+        left: -10%;
+        bottom: 0;
+        transform: scaleX(100%);
+    }
+
+    50% {
+        left: -5%;
+        bottom: -4%;
+        transform: scaleX(100%);
+    }
+
+    62.5% {
+        left: -1%;
+        bottom: -8%;
+        transform: scaleX(100%);
+    }
+
+    75% {
+        left: -5%;
+        bottom: -12%;
+        transform: scaleX(100%);
+    }
+
+    87.5% {
+        left: -10%;
+        bottom: -8%;
+        transform: scaleX(100%);
+    }
+
+    100% {
+        left: -5%;
+        bottom: -4%;
+        transform: scaleX(100%);
+    }
+}
+
+@keyframes ocean2 {
+    0% {
+        left: -5%;
+        bottom: -4%;
+        transform: scaleX(100%);
+    }
+
+    12.5% {
+        left: -7%;
+        bottom: 0;
+        transform: scaleX(100%);
+    }
+
+    25% {
+        left: -5%;
+        bottom: 4%;
+        transform: scaleX(100%);
+
+    }
+
+    37.5% {
+        left: -3%;
+        bottom: 0;
+        transform: scaleX(100%);
+    }
+
+    50% {
+        left: -5%;
+        bottom: -4%;
+        transform: scaleX(100%);
+    }
+
+    62.5% {
+        left: -7%;
+        bottom: -8%;
+        transform: scaleX(100%);
+    }
+
+    75% {
+        left: -5%;
+        bottom: -12%;
+        transform: scaleX(100%);
+    }
+
+    87.5% {
+        left: -3%;
+        bottom: -8%;
+        transform: scaleX(100%);
+    }
+
+    100% {
+        left: -5%;
+        bottom: -4%;
+        transform: scaleX(100%);
+    }
+}
+
+.water {
+    position: absolute;
+
+    bottom: 0%;
+
+    background-color: rgba(15, 135, 206, 255);
+
+    width: 100%;
+    height: 25%;
+
+    z-index: 2;
+}
+
+.target {
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain;
+
+    z-index: 6;
+}
+
+.normal {
+    background-image: url('Resources/normal_target.png');
+    height: 70%;
+    width: 10%;
+}
+
+.can {
+    background-image: url('Resources/can.png');
+    height: 65%;
+    width: 6%;
+}
+
+.duck {
+    background-image: url('Resources/duck.png');
+    height: 80%;
+    width: 12%;
+}
+
+.capybara {
+    background-image: url('Resources/capybara.png');
+    background-color: rgb(87, 49, 18, 0.2);
+    height: 100%;
+    width: 20%;
+
+    z-index: 7;
+}
+
+.wood {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+
+    top: 50%;
+
+    z-index: 5;
+}
+
+.wood.normal {
+    background-image: url('Resources/wood\ normal.png');
+    height: 70%;
+    width: 10%;
+}
+
+.wood.can {
+    background-image: url('Resources/wood\ can.png');
+    height: 65%;
+    width: 6%;
+}
+
+.wood.duck {
+    background-image: url('Resources/wood\ duck.png');
+    height: 80%;
+    width: 12%;
+}
+
+#timer {
+    position: absolute;
+
+    color: #04AA6E;
+
+    font-size: x-large;
+    font-weight: bolder;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    left: 1%;
+    top: 1%;
+
+    background-color: rgb(0, 0, 0, 0.7);
+
+    z-index: 7;
+}
+
+#score {
+    position: absolute;
+
+    color: #04AA6E;
+
+    font-size: x-large;
+    font-weight: bolder;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    right: 1%;
+    top: 1%;
+
+    background-color: rgb(0, 0, 0, 0.7);
+
+    z-index: 7;
+}
+
+#levelNum {
+    position: absolute;
+
+    color: #04AA6E;
+
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    bottom: 0;
+
+    background-color: rgb(0, 0, 0, 0.7);
+
+    z-index: 7;
+}
+
+/* ALL CSS ABOVE THIS COMMENT IS LEO'S WORK */
+
+/* name styling added by Sam */
+#name {
+    position: absolute;
+
+    color: #04AA6E;
+
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    left: 0%;
+    bottom: 0%;
+
+
+    background-color: rgb(0, 0, 0, 0.7);
+
+    z-index: 7;
+}
+
+/* audio tags styling added by Sam */
+#audioContainer {
+    position: relative;
+    color: #04AA6E;
+
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    right: -35%;
+    bottom: -45%;
+
+    z-index: 7;
+
+    background-color: rgb(0, 0, 0, 0.7);
+}

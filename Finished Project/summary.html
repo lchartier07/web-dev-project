@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Summary</title>
+    <link rel="stylesheet" href="summary_style.css">
+</head>
+<body>
+    <div id = "summary">
+        <div id="background">
+            <div id="game">
+                <div id='curtains'></div>
+                <div id = "stage"></div>
+                <div id= "lane1" class="lane">
+                    <div id="wave1" class="wave"></div>
+                    <div class="water"></div>
+                </div>
+                <div id= "lane2" class="lane">
+                    <div id="wave2" class="wave"></div>
+                    <div class="water"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id = "statistics">
+            <h1 id = "title">
+                <b>Game Summary</b>
+            </h1>
+
+            <hr id = "titleDivider">
+
+            <h2 id = "name">
+                <b>Alias:</b>
+            </h2>
+
+            <hr>
+
+            <h2 id = "score">
+                <b>Score:</b>
+            </h2>
+
+            <hr>
+
+            <h2 id = "shotsTaken">
+                <b>Shots Taken:</b>
+            </h2>
+
+            <hr>
+
+            <h2 id = "targetsHit">
+                <b>Targets Hit:</b>
+            </h2>
+
+            <hr>
+
+            <h2 id = "accuracy">
+                <b>Accuracy:</b>
+            </h2>
+        </div>
+
+        <div id = "recentScores">
+            <div id = recentScoreTitle>
+                <h2>Recent Scores</h2>
+            </div>
+            <hr id = "titleDivider2">
+            <div id = "scoreOne"></div>
+            <div id = "scoreTwo"></div>
+            <div id = "scoreThree"></div>
+        </div>
+
+        <div id = "restart">
+            <button id = "restartButton" onclick="redirect()">Restart</button>    
+        </div>
+
+    </div> 
+    <script src="summary_script.js"></script>
+</body>
+</html>

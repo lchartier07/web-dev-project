@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carnival Shooter</title>
+    <link rel="stylesheet" href="Leo'sGameArea.css">
+</head>
+
+<body>
+    <div id="gameArea">
+        <div id="game">
+            <div id="timer">TIMER: / 90</div>
+            <div id="score">SCORE: 0</div>
+            <!-- Name implementation added and coded by Sam-->
+            <div id = "name">NAME: </div>
+            <div id = "audioContainer">
+                <form action="">
+                    <!-- label semantic tag helps with accessibility -->
+                    <label for="audio">Audio</label>
+                    <input type="checkbox" id = "audio" checked>
+                </form>
+            </div>
+            <div id="levelNum">LEVEL: 1</div>
+            <div id='curtains'></div>
+            <div id='curtain_top'></div>
+            <div id='curtain_left'></div>
+            <div id='curtain_right'></div>
+            <div id = "stage"></div>
+            <div id= "laneBackground1" class="lane"></div>
+            <div id= "laneBackground2" class="lane"></div>
+            <div id= "skyLane"></div>
+            <div id= "lane1" class="lane">
+                <div id="wave1" class="wave"></div>
+                <div class="water"></div>
+            </div>
+            <div id= "lane2" class="lane">
+                <div id="wave2" class="wave"></div>
+                <div class="water"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="engine.js"></script>
+
+</html>
